@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <title>NeuralSight | Documentation by Paul Ndirangu</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stroke.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shCore.css" media="all">
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shThemeRDark.css" media="all">
+
+    <!-- CUSTOM -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+
+    <script>
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+            document.documentElement.scrollTo({ top: 0, behavior: 'smooth' })
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector('#mode').addEventListener('click',()=>{
+                document.querySelector('html').classList.toggle('dark');
+            })
+        });
+
+
+    </script>
+
+    <div id="wrapper">
+
+        <div id="mode" >
+            <div class="dark">
+                <svg aria-hidden="true" viewBox="0 0 512 512">
+                    <title>lightmode</title>
+                    <path fill="currentColor" d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"></path>
+                </svg>
+            </div>
+            <div class="light">
+                <svg aria-hidden="true" viewBox="0 0 512 512">
+                    <title>darkmode</title>
+                    <path fill="currentColor" d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <section id="top" class="section docs-heading">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="big-title text-center">
+                            <h1>NeuralSight  Official Documentation</h1>
+                            <p class="lead">Using AI to democratize access to diagnostic healthcare for all, version 1.0</p>
+                        </div>
+                        <!-- end title -->
+                    </div>
+                    <!-- end 12 -->
+                </div>
+                <!-- end row -->
+
+                <hr>
+
+            </section>
+            <!-- end section -->
+
+            <div-- class="row">
+
+                <div class="col-md-3">
+                    <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
+                        <ul class="nav">
+                            <li><a href="#line1">Getting Started</a></li>
+                            <li><a href="#line2">NeuralSight AI Intro</a></li>
+                            <li><a href="#line4">Set Up Locally</a></li>
+                            <li><a href="#line5">Install Dependencies</a></li>
+                            <li><a href="#line6">Generating CSV File</a></li>
+                            <!--li><a href="#line7">How to Use Option Panel</a>
+                                <ul class="nav">
+                                    <li><a href="#line7_1">General Options</a></li>
+                                    <li><a href="#line7_2">Style Options</a></li>
+                                    <li><a href="#line7_3">Header Options</a></li>
+                                    <li><a href="#line7_4">Font Options</a></li>
+                                    <li><a href="#line7_5">Slider Options</a></li>
+                                    <li><a href="#line7_6">Page Options</a></li>
+                                    <li><a href="#line7_7">Import & Export</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#line8">Support Desk</a></li>
+                            <li><a href="#line9">Files & Sources</a></li>
+                            <li><a href="#line10">Version History (Changelog)</a></li-->
+                            <li><a href="#line11">Copyright and license</a></li>
+                        </ul>
+                    </nav >
+                </div>
+                <div class="col-md-9">
+                    <section class="welcome">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                               <h2 class="dark-text">Introduction<hr></h2>
+                                <div class="row">
+
+                                    <div class="col-md-12 full">
+                                        <div class="intro1">
+                                            <ul>
+                                                <li><strong>Item Name : </strong>NeuralSight AI</li>
+                                                <li><strong>Item Version : </strong> v 1.0</li>
+                                                <li><strong>Authors  : </strong> <a href="https://www.linkedin.com/in/paul-ndirangu/" target="_blank">Paul N. Mwaura & Stephen Kamau</a></li>
+                                                <li><strong>Support Forum : </strong> <a href="https://neurallabs.africa" target="_blank">https://support.neuralsight.africa</a></li>
+                                                <li><strong>License : </strong> <a href="#" target="_blank">GPL-3 License</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <hr>
+                                        <div>
+                                            <p>First of all, Thank you so much for your amazing project.
+                                                <strong>You are awesome!</strong>
+                                                <br> You are entitled to contribute and get free code updates to this product + exceptional support from the author directly.
+                                            </p>
+
+                                            <p>This documentation is to help you regarding each step of setting up and running it locally. Please go through the documentation carefully to understand how to setup properly. Python knowledge is required to setup and contribute to this project. You may learn basics <a href="https://www.python.org/" target="_blank">here</a>, <a href="https://docs.python.org/3/" target="_blank">here</a> and <a href="https://www.learnpython.org/" target="_blank">here</a>. </p>
+
+                                            <h4>Requirements</h4>
+                                            <p>You will need the following softwares to get started.</p>
+                                            <ol>
+                                                <li>Code Editing Software (eg: Visual Studio Code, Pycharm Community version or Notepad)</li>
+                                                <li>Google Colab for free access to cloud GPU</li>
+                                            </ol>
+                                            <div class="intro2 clearfix">
+                                                <p><i class="fa fa-exclamation-triangle"></i> Be careful while installing dependencies. If not installed properly, the code may break completely. We would recommend setting up a virtual environment.
+                                                    <br> No support is provided for older libraries not included in the dependencies.
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- end row -->
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="line1" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Getting Started <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>Easy to Use</h4>
+                                <p>NeuralSight is an Intelligent tool that offers a great opportunity to enhance and
+                                    augment radiology services thereby relieving the bottleneck in medical imaging
+                                    diagnosis. NeuralSight provides a high-level web-interface equipped with advanced
+                                    annotation tools and project management features. NeuralSight was designed from the
+                                    ground up to enhance the radiology workflow and reduce backlogs in the workflow.</p>
+                                <h4>Focus on What Matters</h4>
+                                <p>NeuralSight™ provides automated interpretation of radiology exams like CXRs, CTs and
+                                    MRI scans to identify pathologies and diseases such as Pneumothorax, Cardiomegaly,
+                                    Benign breast Tumour, Malignant breast Cancer, Atelectasis, Infiltration, Emphysema,
+                                    Mass/Nodule, Pleural Thickening, Effusion, Consolidation, Tuberculosis, Pneumonia,
+                                    Prostate and Lung cancer.</p>
+                                <h4>Our Impact</h4>
+                                <p>To provide a thorough and actionable innovation artificial intelligence solutions that
+                                    will help the healthcare sector achieve its objectives. reduces workload and thereby
+                                    eases such costs and provides a friendly pricing model to patients. Offering affordable
+                                    health care services will ensure that everyone, even those in marginalised communities,
+                                    are able to receive healthcare services. AI to solve the overwhelming UN Strategic
+                                    Development Goal 3 Good Health and Wellbeing has the potential to ensure that Africa
+                                    improves its healthcare system.</p>
+                                <h4>The Tool</h4>
+                                <p>NEURALSIGHT system is a combination of YOLOv5 trained model and a set of endpoints
+                                    that allows users to detect 14 Chest X-ray pathologies. The model is trained using
+                                    a VinBig dataset of X-ray images and annotations of the 14 pathologies of interest.
+                                    The model is able to predict bounding boxes and class probabilities for each object
+                                    (pathology) in an image. The endpoints allow users to perform tasks such as logging
+                                    in and uploading images for prediction, as well as viewing and downloading the
+                                    prediction results and reports. The model is already trained hence the users only
+                                    require to upload their XRAY images and be able to get response as the prediction
+                                    and reports. The model has been evaluated on a test dataset and has shown to have
+                                    good performance in terms of metrics such as average precision and mean average
+                                    precision. The model is deployed using FastAPI, which is a lightweight web framework for
+                                    building web applications and APIs, and is easily integrated with other technologies.</p>
+
+                                <h3>Project Data Acquiring</h3>
+                                <h4>Dataset Description</h4>
+                                <p>For this dataset, the main aim was to come up with an object classifying system for
+                                    common thoracic lung diseases and localizing critical findings. This is an object
+                                    detection and classification problem. The images are in png file with difference
+                                    dimensions i.e 1024, 216 and 512. In this project, Images that were used were the
+                                    one with 512 dimensions.
+                                <h4>Dataset information</h4>
+                                <p>The dataset comprises 67914 annotated and those not annotated images where there was
+                                    only 4394 unique patients images that were annotated  for posterior-anterior (PA) Xrays
+                                    scans in PNG format. All images were labeled by a panel of experienced radiologists
+                                    for the presence of 14 critical radiographic findings as listed below:</p>
+                                <pre class="brush: html; highlight: [2,4]">
+                                    0 - Aortic enlargement
+                                    1 - Atelectasis
+                                    2 - Calcification
+                                    3 - Cardiomegaly
+                                    4 - Consolidation
+                                    5 - ILD
+                                    6 - Infiltration
+                                    7 - Lung Opacity
+                                    8 - Nodule/Mass
+                                    9 - Other lesion
+                                    10 - Pleural effusion
+                                    11 - Pleural thickening
+                                    12 - Pneumothorax
+                                    13 - Pulmonary fibrosis
+                                    The "No finding" observation (14) was intended to capture the absence of all
+                                    findings above but in this case it was ignored.
+                                </pre>
+                                <h4>Data preprocessing</h4>
+                                <p>The Model (YOLOv5) requires specific data preprocessing steps in order to work
+                                    effectively. In this case, we were to process our information to meets this standard.
+                                    The following is a detailed workflow documentation of the data preprocessing steps
+                                    that were taken in this particular case:<br />
+
+                                    The main difference between GroupKFold and other cross-validation techniques like
+                                    train_test_split is that it helped takes into account pathologies or labels for each
+                                    class in the sample split equally. i.e, Since some pathologies had more class Distribution
+                                    than others, It helped us ensure that the samples from one class label of pathology
+                                    do not end up in the same group and are equally Distributed in both groups. For this
+                                    project, since the data is split into 5 folds, 1/5 (or 20%) of the data will be used
+                                    as the test set, while 4/5 (or 80%) will be used as the training set.<br />
+                                </p>
+
+                                <h4>Preparation of dataset Structure for modelling.</h4>
+                                <p>To structure the images and labels for YOLOv5 training, We created the following 4
+                                    directories where the training and validation information was to reside.</p>
+                                <pre class="brush: html">
+                                    1. `/WORKING_DIR/PROJECT_DIR/labels/train` - This directory will store the labels (annotations) for the training images.
+
+                                    2. `/WORKING_DIR/PROJECT_DIR/labels/val` - This directory will store the labels (annotations) for the validation images.
+
+                                    3. `/WORKING_DIR/PROJECT_DIR/images/train` - This directory will store the training images.
+
+                                    4. `/WORKING_DIR/PROJECT_DIR/images/val` - This directory will store the validation images.
+                                </pre>
+
+                                <p>Once the directories were created, We then moved or copy the images and their
+                                    corresponding labels to the appropriate directories. The labels for each image
+                                    should have the same file name as the image, and should be placed in the appropriate
+                                    label directory </p>
+                                    <pre class="brush: html">
+                                        (either `/WORKING_DIR/PROJECT_DIR/labels/train` or
+                                        `/WORKING_DIR/PROJECT_DIR/labels/val`).
+                                    </pre>
+                                <p>
+                                    The labels were also in their own format. Each image had a single text file as labels.
+                                    The format of labels for YOLOv5 model used was a plain text file with the same name
+                                    as the corresponding image file, and with a `.txt` extension. The file should
+                                    contain one line for each object in the image, with the following format:</p>
+
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line2" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">NeuralSight Intro<hr></h2>
+                                <em>Let's discover <b>NeuralSight</b> in less than 5 minutes.</em>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="intro2 clearfix">
+                            <h4>Getting Started</h4>
+                            <p><i class="fa fa-wordpress"></i> Get started by setting up your environment.
+                                Or try our demo with <a href="https://neurallabs.africa">neurallabs.africa.</a>
+                                <br> Please read more about NeuralSight here. <a href="https://github.com/NeuralSight">NeuralSight Github Repository.</a> </p>
+                        </div>
+
+                        <hr>
+
+                        <h4>What you'll need</h4>
+
+                        <p>Python version 3.5 or above:</p>
+                        <ul>
+                        <li>
+                            When installing Python, you are recommended to check all checkboxes related to dependencies.
+                        </li>
+                        </ul>
+
+                        <a href="https://neurallabs.africa" class="btn btn-primary">Book Demo</a> <a href="#" class="btn btn-info">Ask a Question</a>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="media">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/snFzbPm_RUE" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+                    <!-- end section -->
+
+                    <!--section id="line3" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">How to Install Theme <hr></h2>
+                            </div>
+
+                        </div>
+
+
+                        <h4>Upload via WordPress Admin</h4>
+
+                        <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+
+                        <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
+
+                        <hr>
+
+                        <h4>Upload via FTP Server</h4>
+
+                        <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+
+                        <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="media">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=-8NyspCUgA0&t=6s" frameborder="0" allowfullscreen></iframe>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="media">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=-8NyspCUgA0&t=6s" frameborder="0" allowfullscreen></iframe>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </section-->
+                    <!-- end section -->
+
+                    <!--section-- id="line4" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Necessary Plugins <hr></h2>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="images/upload/plugin1.png" alt="" class="img-responsive img-thumbnail">
+                                <h4>Plugin name #1</h4>
+                                <p>Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</p>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <img src="images/upload/plugin2.png" alt="" class="img-responsive img-thumbnail">
+                                <h4>Plugin name #2</h4>
+                                <p>Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</p>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <img src="images/upload/plugin3.png" alt="" class="img-responsive img-thumbnail">
+                                <h4>Plugin name #3</h4>
+                                <p>Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</p>
+                            </div>
+
+
+                            <div class="col-md-12">
+                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+
+                                <div class="text-center">
+                                    <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </section-->
+                    <!-- end section -->
+
+                    <!--section-- id="line5" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Creating Blog Pages <hr></h2>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            </div>
+
+                            <div class="col-md-4">
+                                <a href="upload/thumbnail.png" data-rel="prettyPhoto"><img src="images/upload/thumbnail.png" alt="" class="img-responsive img-thumbnail"></a>
+                                <h4 id="line5_1">WordPress Blog Page -</h4>
+                                <ul>
+                                    <li><strong>Step 1</strong> - Lorem the It is a long established fact that a reader ease read more about WordPress here.</li>
+                                    <li><strong>Step 2</strong> - Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</li>
+                                    <li><strong>Step 3</strong> - Lorem the It is a long established fact that a read.</li>
+                                </ul>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <a href="upload/thumbnail.png" data-rel="prettyPhoto"><img src="images/upload/thumbnail.png" alt="" class="img-responsive img-thumbnail"></a>
+                                <h4 id="line5_2">Blog Post Sections -</h4>
+                                <p>Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</p>
+                                <ul>
+                                    <li><strong>Step 1</strong> - Lorem the It is a long established fact that a reader ease read more about WordPress here.</li>
+                                    <li><strong>Step 2</strong> - Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</li>
+                                    <li><strong>Step 3</strong> - Lorem the It is a long established fact that a read.</li>
+                                </ul>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <a href="upload/thumbnail.png" data-rel="prettyPhoto"><img src="images/upload/thumbnail.png" alt="" class="img-responsive img-thumbnail"></a>
+                                <h4 id="line5_3">Create Blog Gallery -</h4>
+                                <p>Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</p>
+                                <ul>
+                                    <li><strong>Step 1</strong> - Lorem the It is a long established fact that a reader ease read more about WordPress here.</li>
+                                    <li><strong>Step 2</strong> - Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</li>
+                                    <li><strong>Step 3</strong> - Lorem the It is a long established fact that a read.</li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+
+                    </section-->
+                    <!-- end section -->
+
+                    <section id="line6" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Set Up Locally <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="col-md-12 left-align">
+                                <p>Clone the repository to your local machine.</p>
+                                <pre class="brush: html">
+                                    git clone https://github.com/NeuralSight/NeuralSight_AI.git
+                                </pre>
+                                <p>You can type this command into Command Prompt, Powershell, Terminal, or any other
+                                    integrated terminal of your code editor.</p>
+                            </div>
+
+                            <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Install Dependencies<hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                            <div class="col-md-12 left-align">
+                                <p>Clone the repository to your local machine.</p>
+                                <pre class="brush: html">
+                                    git clone https://github.com/NeuralSight/NeuralSight_AI.git
+                                </pre>
+                                <p>You can type this command into Command Prompt, Powershell, Terminal, or any other
+                                    integrated terminal of your code editor.</p>
+                                <pre class="brush: html">
+                                    cd  NeuralSight_AI
+                                </pre>
+                                <p>
+                                    The <em>cd</em> command changes the directory you're working with. In order to work with your
+                                    newly created Docusaurus site, you'll need to navigate the terminal there.
+                                    <br />Install all the dependencies using the requirements.txt file.
+                                </p>
+                                <pre class="brush: html">
+                                    pip install -r requirements.txt
+                                </pre>
+                                <p>The command installs all necessary dependencies you need to run NeuralSight.</p>
+                            </div>
+
+                            <!--div class="col-md-6">
+                                <a href="upload/thumbnail.png" data-rel="prettyPhoto"><img src="images/upload/thumbnail.png" alt="" class="img-responsive img-thumbnail"></a>
+                                <h4>Installation Slider</h4>
+                                <ul>
+                                    <li><strong>Step 1</strong> - Lorem the It is a long established fact that a reader ease read more about WordPress here.</li>
+                                    <li><strong>Step 2</strong> - Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</li>
+                                    <li><strong>Step 3</strong> - Lorem the It is a long established fact that a read.</li>
+                                </ul>
+                            </div-->
+
+
+                            <!--div class="col-md-6">
+                                <a href="upload/thumbnail.png" data-rel="prettyPhoto"><img src="images/upload/thumbnail.png" alt="" class="img-responsive img-thumbnail"></a>
+                                <h4>Updating Slider</h4>
+                                <p>Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</p>
+                                <ul>
+                                    <li><strong>Step 1</strong> - Lorem the It is a long established fact that a reader ease read more about WordPress here.</li>
+                                    <li><strong>Step 2</strong> - Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</li>
+                                    <li><strong>Step 3</strong> - Lorem the It is a long established fact that a read.</li>
+                                </ul>
+                            </--div-->
+
+                        </div>
+
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line7" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Generating CSV File<hr></h2>
+                            </div>
+                            <p>Add Medical files to the workspace for preprocessing:
+                            <pre>python preprocess.py</pre></p>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="col-md-12 left-align">
+                                <h4 id="line7_1">Create your final preprocessed csv dataset - </h4>
+                                <p>Create a file at NeuralSight_AI/training/process.py:</p>
+                            </div>
+                            <pre class="brush: html">
+                                #import some modules
+                                from tqdm.notebook import tqdm
+                                from glob import glob
+
+                                import shutil, os
+                                import cv2
+                                import pandas as pd
+                                import numpy as np
+                                from cleaning import create_data
+
+
+                                import warnings
+                                warnings.filterwarnings("ignore");
+
+                                import dotenv
+                                dotenv.load_dotenv()
+
+                                DATA_DIR = os.getenv("DATA_DIRECTORY")
+                                TRAIN_DIR = os.getenv("TRAIN_DIR")
+                                WANDB_API_KEY = os.getenv("WANDB_API_KEY")
+
+
+                                #check if the file exists
+                                if not os.path.isfile(f'{DATA_DIR}/train.csv'):
+                                    print(f"No SUch Directory in the path Passed  : PATH SEND :: {DATA_DIR}/train.csv")
+                                    print("Exiting....")
+                                    exit(0)
+                                # read the data
+                                df = pd.read_csv(f'{DATA_DIR}/train.csv')
+
+                                df1 = df[["image_id","x_min","y_min","x_max","y_max","class_id", "height", "width", "class_name"]].dropna()
+                                df1['path'] = df1['image_id'].apply(lambda x: f"{DATA_DIR}/train/{x}.png")
+
+                                # get class id
+                                class_dict = {v:k for k,v in dict(df1[['class_name', "class_id"]].values).items()}
+
+
+                                # save  df1 in order to use it for plotting
+                                df1.to_csv("train_clean.csv", index=False)
+
+
+                                check_df = create_data(df1)
+                                # class names available
+                                classes = list(check_df['class_name'].unique())
+
+                                # Yolo normaly requires bbox to be normalized between 0 and 1.
+                                # Since we have have height and width for a particular image, we gonna just divide bbox against either widht or height.
+                                # We then extract the widht and height of the bbox from the above calibrations
+
+
+                                df = check_df.copy()
+
+                                df['x_min'] = df.apply(lambda x: (x.x_min)/x.width, axis =1)
+                                df['y_min'] = df.apply(lambda x: (x.y_min)/x.height, axis =1)
+
+                                df['x_max'] = df.apply(lambda x: (x.x_max)/x.width, axis =1)
+                                df['y_max'] = df.apply(lambda x: (x.y_max)/x.height, axis =1)
+                                df['x_mid'] = df.apply(lambda x: (x.x_max+x.x_min)/2, axis =1)
+                                df['y_mid'] = df.apply(lambda x: (x.y_max+x.y_min)/2, axis =1)
+                                df['w'] = df.apply(lambda x: (x.x_max-x.x_min), axis =1)
+                                df['h'] = df.apply(lambda x: (x.y_max-x.y_min), axis =1)
+
+                                df['area'] = df['w']*df['h']
+
+
+                                selected_classes = (df['class_name'].value_counts(normalize=True).T[df['class_name'].value_counts(normalize=True).T >0.0001])
+                                SELECTED_CLASS_NAMES  = list(selected_classes.index)
+
+                                # Get a dataframe with selected classes
+                                selected_df = df[df['class_name'].isin(SELECTED_CLASS_NAMES)]
+
+
+                                # only which have below 40 bbox instances
+                                img_ids = list((df['image_id'].value_counts(normalize=False).T[df['image_id'].value_counts(normalize=False).T <=40]).index)
+
+
+                                # pd.DataFrame(base_details)
+
+                                TRAIN =[]
+                                # for img_id in selected_df['image_id'].unique():
+                                for img_id in selected_df[selected_df['image_id'].isin(img_ids)]['image_id'].unique():
+                                    curr_df = selected_df[selected_df['image_id'] ==img_id].reset_index(drop=True)
+                                    base_details = dict(curr_df.loc[0][['image_id',"path",'width', 'height']])
+                                    information =[]
+                                    for indx in range(curr_df.shape[0]):
+                                        other_details = dict(curr_df.loc[indx][['class_name', "x_min", "y_min","x_max","y_max", "x_mid", "y_mid", "w", "h", "area" ]])
+                                        information.append(other_details)
+
+                                    TRAIN.append([base_details['image_id'],base_details['path'] ,base_details['width'],base_details['height'],information])
+
+
+                                final_data = pd.DataFrame(TRAIN, columns =['image_id',"path", "width", "height", "information"])
+                                from pprint import pprint
+                                print(final_data.head())
+                                # save this data for feature usage.
+                                final_data.to_csv("processed.csv", index=False)
+                            </pre>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <hr>
+
+                <section id="line7" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Data Pre_Processing for YOLO<hr></h2>
+                            </div>
+                            <p>Add Medical files to the workspace for preprocessing:
+                            <pre>python preprocess.py</pre></p>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+                            <div class="col-md-12 left-align">
+                                <h4 id="line7_1">Data Pre_Processing for YOLO - </h4>
+                                <p>Create a file at NeuralSight_AI/training/process.py:</p>
+                            </div>
+                            <ol>
+                                    <li>- Dropping images with `No findings` label: The first step in preprocessing the data
+                                    was to drop all images with their label information that had a label called
+                                    "No findings" because the label had no any bounding box information which were needed
+                                    for model training. This was done to ensure that the model only focuses on images
+                                    that contain the other 13 Chest X-ray pathologies of interest.</li>
+
+                                    <li>- Removing overlapping bounding boxes which occurs in the same class using Non-maximum
+                                    suppression methods: In order to improve the performance of the model, non-maximum
+                                    suppression was used to remove overlapping bounding boxes which occurs in the same
+                                    class label. This technique helps to reduce the number of false positives by removing
+                                    bounding boxes that have a high overlap with other boxes of the same class. The method
+                                    worked as follows.</li>
+
+                                    <li>- Non-maximum suppression(NMS) function is  used for removing overlapping bounding
+                                    boxes. The function takes in two inputs: "boxes" and "overlapThresh". The "boxes"
+                                    is a list of bounding boxes in the format of (x1, y1, x2, y2) where (x1, y1) is the
+                                    top-left corner and (x2, y2) is the bottom-right corner. "overlapThresh" is a threshold
+                                        value for the overlap ratio of bounding boxes.</li>
+
+                                    <li>- The function first checks if the input "boxes" is an empty list. If it is, it returns
+                                    an empty list. If there are boxes, the function extracts the x and y coordinates of
+                                    the top-left corner and bottom-right corner of each box. It then computes the area
+                                    of each bounding box and sorts the boxes based on the bottom-right y-coordinate.
+                                    Next, the function iterates through each box and compares it with the other boxes
+                                    to calculate the ratio of overlap. If the overlap ratio is greater than the threshold,
+                                    the function removes that box from the list of boxes to be returned. Finally, the
+                                        function returns the remaining boxes as integers.</li>
+
+                                    <li>- Bounding Box information Normalization: The bounding box information were normalized
+                                    to standard values between 0 and 1 against the width and height of the image. This
+                                    ensures that the bounding box coordinates are consistent regardless of the size of
+                                        the input image that a user will feed to the model. It allows us to work on any image size available.</li>
+
+                                    <li>- Calculating the height and width of the bounding box since they are one of the
+                                    crucial features that must be fed to the model during training, they are used to
+                                    identify where what is the size of the box.</li>
+
+                                    <li>- Training and Validation.
+                                    Before Training, We split the data input two in order to validate the model after
+                                    training. We used `GroupKFold method to split`. This method is a variation of the
+                                    KFold method for cross-validation. It is used to split the data into `k` number of
+                                    folds, where `k` in this case, we used k= 5 which means the data will be split into 5 folds.</li>
+                                </ol>
+                            <pre class="brush: html">
+                                from tqdm.notebook import tqdm
+                                from glob import glob
+                                import shutil, os
+                                import cv2
+                                import pandas as pd
+                                import numpy as np
+                                from cleaning import create_data
+
+                                import warnings
+                                warnings.filterwarnings("ignore");
+
+                                import dotenv
+                                dotenv.load_dotenv()
+
+                                DATA_DIR = os.getenv("DATA_DIRECTORY")
+                                TRAIN_DIR = os.getenv("TRAIN_DIR")
+                                WANDB_API_KEY = os.getenv("WANDB_API_KEY")
+
+
+                                #check if the file exists
+                                if not os.path.isfile(f'{DATA_DIR}/train.csv'):
+                                    print(f"No SUch Directory in the path Passed  : PATH SEND :: {DATA_DIR}/train.csv")
+                                    print("Exiting....")
+                                    exit(0)
+                                # read the data
+                                df = pd.read_csv(f'{DATA_DIR}/train.csv')
+
+                                df1 = df[["image_id","x_min","y_min","x_max","y_max","class_id", "height", "width", "class_name"]].dropna()
+                                df1['path'] = df1['image_id'].apply(lambda x: f"{DATA_DIR}/train/{x}.png")
+
+                                # get class id
+                                class_dict = {v:k for k,v in dict(df1[['class_name', "class_id"]].values).items()}
+
+
+                                # save  df1 in order to use it for plotting
+                                df1.to_csv("train_clean.csv", index=False)
+
+
+                                check_df = create_data(df1)
+                                # class names available
+                                classes = list(check_df['class_name'].unique())
+
+
+
+
+                                # Yolo normaly requires bbox to be normalized between 0 and 1.
+                                # Since we have have height and width for a particular image, we gonna just divide bbox against either widht or height.
+                                # We then extract the widht and height of the bbox from the above calibrations
+
+
+                                df = check_df.copy()
+
+                                df['x_min'] = df.apply(lambda x: (x.x_min)/x.width, axis =1)
+                                df['y_min'] = df.apply(lambda x: (x.y_min)/x.height, axis =1)
+
+                                df['x_max'] = df.apply(lambda x: (x.x_max)/x.width, axis =1)
+                                df['y_max'] = df.apply(lambda x: (x.y_max)/x.height, axis =1)
+                                df['x_mid'] = df.apply(lambda x: (x.x_max+x.x_min)/2, axis =1)
+                                df['y_mid'] = df.apply(lambda x: (x.y_max+x.y_min)/2, axis =1)
+                                df['w'] = df.apply(lambda x: (x.x_max-x.x_min), axis =1)
+                                df['h'] = df.apply(lambda x: (x.y_max-x.y_min), axis =1)
+
+                                df['area'] = df['w']*df['h']
+
+
+                                selected_classes = (df['class_name'].value_counts(normalize=True).T[df['class_name'].value_counts(normalize=True).T >0.0001])
+                                SELECTED_CLASS_NAMES  = list(selected_classes.index)
+
+                                # Get a dataframe with selected classes
+                                selected_df = df[df['class_name'].isin(SELECTED_CLASS_NAMES)]
+
+
+                                # only which have below 40 bbox instances
+                                img_ids = list((df['image_id'].value_counts(normalize=False).T[df['image_id'].value_counts(normalize=False).T <=40]).index)
+
+
+                                # pd.DataFrame(base_details)
+
+                                TRAIN =[]
+                                # for img_id in selected_df['image_id'].unique():
+                                for img_id in selected_df[selected_df['image_id'].isin(img_ids)]['image_id'].unique():
+                                    curr_df = selected_df[selected_df['image_id'] ==img_id].reset_index(drop=True)
+                                    base_details = dict(curr_df.loc[0][['image_id',"path",'width', 'height']])
+                                    information =[]
+                                    for indx in range(curr_df.shape[0]):
+                                        other_details = dict(curr_df.loc[indx][['class_name', "x_min", "y_min","x_max","y_max", "x_mid", "y_mid", "w", "h", "area" ]])
+                                        information.append(other_details)
+
+                                    TRAIN.append([base_details['image_id'],base_details['path'] ,base_details['width'],base_details['height'],information])
+
+
+                                final_data = pd.DataFrame(TRAIN, columns =['image_id',"path", "width", "height", "information"])
+                                from pprint import pprint
+                                print(final_data.head())
+                                # save this data for feature usage.
+                                final_data.to_csv("processed.csv", index=False)
+                            </pre>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <hr>
+                        <div class="row">
+
+                            <div class="col-md-12 left-align">
+                                <h4 id="line7_1">Preparation of dataset Structure for modelling - </h4>
+                                <p>To structure the images and labels for YOLOv5 training, We created the following 4
+                                    directories where the training and validation information was to reside.</p>
+                            </div>
+                            <pre>
+                                1. `/WORKING_DIR/PROJECT_DIR/labels/train` - This directory will store the labels (annotations) for the training images.
+                                2. `/WORKING_DIR/PROJECT_DIR/labels/val` - This directory will store the labels (annotations) for the validation images.
+                                3. `/WORKING_DIR/PROJECT_DIR/images/train` - This directory will store the training images.
+                                4. `/WORKING_DIR/PROJECT_DIR/images/val` - This directory will store the validation images.
+                            </pre>
+                            <p>
+                                Once the directories were created, We then moved or copy the images and their corresponding labels to the appropriate directories. The labels for each image should have the same file name as the image, and should be placed in the appropriate labels directory (either `/WORKING_DIR/PROJECT_DIR/labels/train` or `/WORKING_DIR/PROJECT_DIR/labels/val`).
+                                The labels were also in their own format. Each image had a single text file as labels. The format of labels for YOLOv5 model used was a plain text file with the same name as the corresponding image file, and with a `.txt` extension. The file should contain one line for each object in the image, with the following format:
+                            </p>
+                            <pre>
+                                  ````
+                                    class_id x_center y_center width height
+                                  ````
+                            </pre>
+                            <p>
+                                where:
+                                <ul>
+                                    <li>class_id: An integer representing the class of the object. This should correspond to the class labels in your dataset.</li>
+                                    <li>x_center: The x-coordinate of the center of the bounding box, as a fraction of the image width.</li>
+                                    <li>y_center: The y-coordinate of the center of the bounding box, as a fraction of the image height.</li>
+                                    <li>width: The width of the bounding box, as a fraction of the image width.</li>
+                                    <li>height: The height of the bounding box, as a fraction of the image height.</li>
+                                </ul>
+
+                            Each object should be split in a new line. Here's an example of a label file for an image
+                            with two objects, a Pneumothorax and a Cardiomegaly:
+                            <pre>
+                                ````
+                                  12 0.5 0.5 0.2 0.2
+                                  3 0.7 0.7 0.1 0.1
+                                ````
+                            </pre>
+                            This means that there is one Pneumothorax object with class label 12, center coordinates
+                            (0.5,0.5), width and height as 0.2 and one Cardiomegaly object with class label 3, center
+                            coordinates (0.7,0.7), width and height as 0.1
+                            </p>
+                        </div>
+
+                        <hr>
+                        <div class="row">
+
+                            <div class="col-md-12 left-align">
+                                <h4 id="line7_1">Data Information Pointer - </h4>
+                                <p>A YAML file was created which contained all information about the training and
+                                    validation dataset. The file had the following information.</p>
+                            </div>
+                            <pre>
+                               ````yaml
+                                  names:
+                                  - Cardiomegaly
+                                  - Pleural effusion
+                                  - Pleural thickening
+                                  - Aortic enlargement
+                                  - Pulmonary fibrosis
+                                  - ILD
+                                  - Nodule/Mass
+                                  - Other lesion
+                                  - Lung Opacity
+                                  - Infiltration
+                                  - Consolidation
+                                  - Calcification
+                                  - Atelectasis
+                                  - Pneumothorax
+                                  nc: 14
+                                  train: /kaggle/working/train.txt
+                                  val: /kaggle/working/val.txt
+                                ````
+                            </pre>
+                            <p>
+                                where:
+                                <ul>
+                                    <li>- train and val is a text file with all directories for images used for training and validation respectively</li>
+                                    <li>- nc is the number of classes</li>
+                                    <li>- names contains all class names</li>
+                                </ul>
+                            </p>
+                        </div>
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line8" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Support Desk <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Project support will be updated in due course. Please be patient.</p>
+
+                                <p>Please visit our <a href="http://neurallabs.africa"><strong>profile page</strong></a> or ask question <a href="mailto:info@neurallabs.africa">info@neurallabs.africa</a></p>
+
+                                <strong>Support for the project includes:</strong>
+                                <ul>
+                                    <li>* Responding to questions or problems regarding the the project as a whole and its features</li>
+                                    <li>* Fixing bugs and reported issues</li>
+                                    <li>* Providing updates to ensure compatibility with new software versions</li>
+                                </ul>
+                                <strong>Item support does not include:</strong>
+                                <ul>
+                                    <li>* Customization and installation services</li>
+                                    <li>* Support for third party software and plug-ins</li>
+                                </ul>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <strong>Before seeking support, please...</strong>
+                                <ul>
+                                    <li>* Make sure your question is a valid Theme Issue and not a customization request.</li>
+                                    <li>* Make sure you have read through the documentation and any related video guides before asking support on how to accomplish a task.</li>
+                                    <li>* Make sure to double-check the theme FAQs.</li>
+                                    <li>* Almost 80% of the time we find that the solution to people's issues can be solved with a simple "Google Search". You might want to try that before seeking support. You might be able to fix the issue yourself much quicker than we can respond to your request.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <!--section id="line9" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Files & Sources <hr></h2>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <strong>Included Stylesheets</strong>
+
+                                <p>These are the primary CSS files used for general front-end styling. Use these to customize your theme even further. All included JavaScript codes under <strong>yourthemename/css/</strong></p>
+
+                                <ul>
+                                    <li>1. style.css - Primary stylesheet</li>
+                                    <li>2. bootstrap.css - Bootstrap stylesheet</li>
+                                    <li>3. owl-carousel.css - OWL Carousel</li>
+                                    <li>4. fontawesome.css - FontAwesome Font Icons stylesheet</li>
+                                    <li>5. custom.css - Pathos Color Schemes stylesheet</li>
+                                    <li>6. prettyPhoto.css - Lightbox effect css file</li>
+                                    <li>7. flexslider.css - Flexslider css file</li>
+                                    <li>8. et-line.css - Elegant icons css file</li>
+                                    <li>9. carousel.css - OWL Carousel css file</li>
+                                    <li>10. animate.css - CSS3 animations css file</li>
+                                </ul>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <strong>Included JavaScript</strong>
+
+                                <p>These are the various attribution inks to the Javascript files included or modified to work with in this theme. All included JavaScript codes under <strong>yourthemename/js/</strong></p>
+
+                                <ul>
+                                    <li>1. bootstrap.js - Bootstrap JavaScript</li>
+                                    <li>2. custom.js - All JavaScript Plugins</li>
+                                    <li>3. retina.js - Retina JavaScript</li>
+                                    <li>4. jquery.js - Base JavaScript</li>
+                                    <li>5. prettyPhoto.js - Lightbox JavaScript</li>
+                                    <li>6. owl-carousel.js - Lightbox JavaScript</li>
+                                    <li>7. revslider.js - Revolution Slider JavaScript</li>
+                                    <li>8. flexslider.js - Flexslider JavaScript</li>
+                                    <li>9. awesome-grid.nin.js - Awesome grid portfolio JavaScript</li>
+                                    <li>10. circle.js - Coming soon page JavaScript</li>
+                                    <li>11. contact.js - Contact form validate JavaScript</li>
+                                    <li>12. isotope.js - Masonry Portfolio JavaScript</li>
+                                    <li>13. progress.js - Progress bar JavaScript</li>
+                                    <li>14. rotate.js - Text rotate effect JavaScript</li>
+                                    <li>15. wow.js - CSS3 animation JavaScript</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </section-->
+
+                    <section id="line10" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Version History (Changelog) <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <p>You can find the version history (changelog.txt) file on <strong>yourthemename-full.zip</strong> folder or you can check changelog on theme sale page.</p>
+                                <p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+
+                                <hr>
+
+                                <h4>Changelog</h4>
+
+                                <pre class="brush: html">
+
+                                        -----------------------------------------------------------------------------------------
+                                        Version 1.0 - Dec 7th, 2023
+                                        -----------------------------------------------------------------------------------------
+                                        - Updated version as a result of clinical trials.
+
+                                        -----------------------------------------------------------------------------------------
+                                        Version 0.1 - May 7th, 2022
+                                        -----------------------------------------------------------------------------------------
+                                        Pilot project version.
+
+
+                                      </pre>
+
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line11" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Copyright and license <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                
+                                <p>Code released under the <a href="#" target="_blank">Un License</a> License.</p>                        
+                                <p>For more information about copyright and license check <a href=" https://choosealicense.com/licenses/unlicense/" target="_blank">choosealicense.com</a>.</p>
+                            
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+                </div>
+                <!-- // end .col -->
+
+            </div>
+            <!-- // end .row -->
+
+        </div>
+        <!-- // end container -->
+
+    </div>
+    <!-- end wrapper -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/retina.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+
+    <!-- CUSTOM PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/syntax-highlighter/scripts/shCore.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushXml.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushCss.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushJScript.js"></script>
+
+</body>
+
+</html>
