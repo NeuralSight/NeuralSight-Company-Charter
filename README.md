@@ -60,22 +60,18 @@ Contents:
 * Open Pull Request
 * Discord
 
+### Requirements 
+
 ### Open a pull request
 These guidelines help maintainers review new pull requests. Stick to the guidelines for quicker and easier pull request reviews.
 >>
 We prefer gradual, small changes over sudden, big changes
->>
 Write a helpful title for your pull request (if someone reads only one sentence, will they understand your change?)
->>
 Address the following questions in your pull request:
->>
-What is a short summary of your change?
->>
-Why is this change helpful?
->>
-Any specific details to consider?
->>
-What is the desired outcome of your change?
+* What is a short summary of your change?
+* Why is this change helpful?
+* Any specific details to consider?
+* What is the desired outcome of your change?
 
 ### Maintainer response time
 Project maintainers make a best effort to respond in 10 days or less to new issues. Current maintainers are volunteers working on the project, so we try to keep up as best we can. If more than 10 days passed and you have not received a reply, follow up on [Neural Labs Africa Discord channel](https://discord.gg/gAUMtT8p). Someone may have missed your comment – we are not intentionally ignoring anyone.
