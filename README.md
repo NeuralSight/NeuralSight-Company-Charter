@@ -50,3 +50,35 @@ on open source platforms for the open source.
 ## Contribution Policy
 You are welcome to submit an update in the repo NeuralSight frontend if you do have any ideas that could enhance NeuralSight.
 If you have any code that enhances a component of NeuralSight or implements new features, please submit a pull request to the associated repository. If those portions of code are tested and documented, it is more than welcome.
+
+## Contributor GuideLines
+This guide explains how to contribute to the NeuralSight project. It defines working practices of the development team. This document helps new contributors start working on the project. It is a living document and will change. If you think something could be better, please open an issue with your feedback.
+
+### Set up a development environment
+Contents:
+* Requirements
+* Open Pull Request
+* Discord
+
+### Open a pull request
+These guidelines help maintainers review new pull requests. Stick to the guidelines for quicker and easier pull request reviews.
+
+We prefer gradual, small changes over sudden, big changes
+
+Write a helpful title for your pull request (if someone reads only one sentence, will they understand your change?)
+
+Address the following questions in your pull request:
+
+What is a short summary of your change?
+
+Why is this change helpful?
+
+Any specific details to consider?
+
+What is the desired outcome of your change?
+
+### Maintainer response time
+Project maintainers make a best effort to respond in 10 days or less to new issues. Current maintainers are volunteers working on the project, so we try to keep up as best we can. If more than 10 days passed and you have not received a reply, follow up on [Neural Labs Africa Discord channel](https://discord.gg/gAUMtT8p). Someone may have missed your comment – we are not intentionally ignoring anyone.
+
+Remember, using issue templates and answering the above questions in new pull requests reduces the response time from a maintainer to your issue or pull request.
+
