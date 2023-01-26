@@ -86,3 +86,7 @@ Project maintainers make a best effort to respond in 10 days or less to new issu
 
 Remember, using issue templates and answering the above questions in new pull requests reduces the response time from a maintainer to your issue or pull request.
 
+## Code of Conduct
+This project adheres to a Code of Conduct based on Python. As a community member you have to read and agree with it.
+
+For more information please contact us and/or visit the original [Python Code of Conduct homepage](https://www.python.org/psf/conduct/).
