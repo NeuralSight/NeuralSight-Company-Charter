@@ -59,8 +59,13 @@ Contents:
 * Requirements
 * Open Pull Request
 * Discord
+* Maintainer Response Time
 
 ### Requirements 
+To setup NeuralSight development environment, you need the following:
+* Python3 installed
+* Discord Account
+
 
 ### Open a pull request
 These guidelines help maintainers review new pull requests. Stick to the guidelines for quicker and easier pull request reviews.
@@ -72,6 +77,9 @@ Address the following questions in your pull request:
 * Why is this change helpful?
 * Any specific details to consider?
 * What is the desired outcome of your change?
+
+### Join Our Discord Channel
+To better engahge with the development team, we would recommend you to sign up on Discord if you do yet have an account, then join our channel [Neural Labs Africa Discord channel](https://discord.gg/gAUMtT8p).
 
 ### Maintainer response time
 Project maintainers make a best effort to respond in 10 days or less to new issues. Current maintainers are volunteers working on the project, so we try to keep up as best we can. If more than 10 days passed and you have not received a reply, follow up on [Neural Labs Africa Discord channel](https://discord.gg/gAUMtT8p). Someone may have missed your comment – we are not intentionally ignoring anyone.
