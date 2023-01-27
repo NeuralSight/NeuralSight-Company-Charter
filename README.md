@@ -24,8 +24,8 @@ This repository contains Neural Labs Africa Company Chater, Contributor Policies
 ## Important Resources:
 1. [What is NeuralSight](https://github.com/NeuralSight/Get-to-Understand-NeuralSight-AI)
 2. [NeuralSight Project Documentation](https://neuralsight.github.io/NeuralSight_Docs/)
-3. [NeuralSight Frontend Repository](https://github.com/NeuralSight/NeuralSight_frontend)
-4. [Company Charter](https://github.com/NeuralSight/NeuralSight_Docs)
+3. [NeuralSight AI Repository](https://github.com/NeuralSight/NeuralSight_AI/)
+4. [NeuralSight Frontend Repository](https://github.com/NeuralSight/NeuralSight_frontend)
 5. [Have a new Feature or an Issue you want fixed?](https://github.com/NeuralSight/NeuralSight_AI/tree/main/.github/ISSUE_TEMPLATE)
 
 
