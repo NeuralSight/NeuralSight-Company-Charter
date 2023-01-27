@@ -4,8 +4,8 @@
 Neural Labs Africa is an innovative medical technology company screening Medical Images for Radiologists & Hospitals in real-time to identify diseases such as Pneumonia and Tuberculosis. 
 [Read the Documentation Online](https://neuralsight.github.io/NeuralSight_Docs/)
 
-## what is in This Repository?
-This repository contains Neural Labs Africa Company Chater.
+## What is in This Repository?
+This repository contains Neural Labs Africa Company Chater, Contributor Policies and Guidelines.
 
 ### Table of contents:
 * Vision
@@ -18,13 +18,8 @@ This repository contains Neural Labs Africa Company Chater.
 * Contribution Policies
 * Contributor GuideLines
 * Code of Conduct
+* License
 
-
-
-## License
-The code in this repository is licensed under the GPL 3.0 license. This license allows for free use, distribution, and modification of the code, with the requirement that any derivative works must also be released under the GPL 3.0 license. You can find the full text of the GPL 3.0 license at the following link: https://www.gnu.org/licenses/gpl-3.0.en.html and a summary of the license can be found here: https://www.gnu.org/licenses/quick-guide-gplv3.html.
-
-Please note that while this code is open-sourced, any medical data used in this code should be used only with permission and under strict compliance with patient privacy laws and regulations.
 
 ## Important Resources:
 1. [What is NeuralSight](https://github.com/NeuralSight/Get-to-Understand-NeuralSight-AI)
@@ -38,6 +33,7 @@ Please note that while this code is open-sourced, any medical data used in this 
 3. [NeuralSight Frontend Repository](https://github.com/NeuralSight/NeuralSight_frontend)
 4. [Have a new Feature or an Issue you want fixed?](https://github.com/NeuralSight/NeuralSight_AI/tree/main/.github/ISSUE_TEMPLATE)
 5. [NeuralSight AI Backend Repository](https://github.com/NeuralSight/NeuralSight_AI/)
+
 
 ## 1. Vision  
 To positively impact healthcare by using AI, a revolutionary technology to democratize access to diagnostic healthcare.
@@ -125,3 +121,12 @@ Remember, using issue templates and answering the above questions in new pull re
 This project adheres to a Code of Conduct based on Python. As a community member you have to read and agree with it.
 
 For more information please contact us and/or visit the original [Python Code of Conduct homepage](https://www.python.org/psf/conduct/).
+
+
+## License
+The code in this repository is licensed under the GPL 3.0 license. This license allows for free use, distribution, and modification of the code, with the requirement that any derivative works must also be released under the GPL 3.0 license. You can find the full text of the GPL 3.0 license at the following link: https://www.gnu.org/licenses/gpl-3.0.en.html and a summary of the license can be found here: https://www.gnu.org/licenses/quick-guide-gplv3.html.
+
+Please note that while this code is open-sourced, any medical data used in this code should be used only with permission and under strict compliance with patient privacy laws and regulations.
+
+## Additional Information
+Please reach out to us at info@neurallabs.africa
