@@ -2,7 +2,7 @@
 
 ## Introduction
 Neural Labs Africa is an innovative medical technology company screening Medical Images for Radiologists & Hospitals in real-time to identify diseases such as Pneumonia and Tuberculosis. 
-[Read the Documentation Online](https://neuralsight.github.io/NeuralSight-Company-Charter/)
+[Read the Documentation Online](https://neuralsight.github.io/NeuralSight-Company-Charter-and-Documentation//)
 
 ## What is in This Repository?
 This repository contains Neural Labs Africa Company Chater, Contributor Policies and Guidelines.
