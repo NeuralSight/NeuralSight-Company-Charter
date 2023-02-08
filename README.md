@@ -2,7 +2,7 @@
 
 ## Introduction
 Neural Labs Africa is an innovative medical technology company screening Medical Images for Radiologists & Hospitals in real-time to identify diseases such as Pneumonia and Tuberculosis. 
-[Read the Documentation Online](https://neuralsight.github.io/NeuralSight-Company-Charter-and-Documentation//)
+[Read the Documentation Online](https://neuralsight.github.io/NeuralSight-Company-Charter-and-Documentation/)
 
 ## What is in This Repository?
 This repository contains Neural Labs Africa Company Chater, Contributor Policies and Guidelines.
@@ -23,7 +23,7 @@ This repository contains Neural Labs Africa Company Chater, Contributor Policies
 
 ## Important Resources:
 1. [What is NeuralSight](https://github.com/NeuralSight/Get-to-Understand-NeuralSight-AI)
-2. [NeuralSight Project Documentation](https://neuralsight.github.io/NeuralSight_Docs/)
+2. [NeuralSight Project Documentation](https://neuralsight.github.io/NeuralSight-Company-Charter-and-Documentation/)
 3. [NeuralSight AI Repository](https://github.com/NeuralSight/NeuralSight_AI/)
 4. [NeuralSight Frontend Repository](https://github.com/NeuralSight/NeuralSight_frontend)
 5. [Have a new Feature or an Issue you want fixed?](https://github.com/NeuralSight/NeuralSight_AI/tree/main/.github/ISSUE_TEMPLATE)
